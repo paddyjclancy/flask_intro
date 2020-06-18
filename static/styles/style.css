@@ -1,3 +1,51 @@
 /* Imports */
 
 @import url('https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&family=Ubuntu:wght@300;400;700&display=swap');
+@import url('button.css');
+@import url('avatar.css');
+@import url('banner.css');
+
+.container-up {
+	width: 600px;
+	margin: 20px auto;
+}
+
+.container-down {
+	width: 600px;
+	margin-top: 280px;
+}
+
+.flex-container {
+	width: 1250px;
+	padding: 20px;
+	display: flex;
+	justify-content: space-between;
+	min-width: 80%;
+}
+
+.text-center {
+	text-align: center;
+	margin: 15px auto;
+}
+
+body {
+	font-family: 'Lato', sans-serif;
+	color: #222831;
+	background-color: #F8F8F8
+}
+
+body, p {
+	border-width: 50px;
+	margin: 15px;
+}
+
+h1 {
+	font-weight: bolder;
+	text-decoration: underline;
+}
+
+h2 {
+	text-decoration: underline;
+	font-family: 'Ubuntu', sans-serif;
+	font-weight: lighter;
+}
