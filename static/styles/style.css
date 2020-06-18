@@ -23,6 +23,26 @@
 	min-width: 80%;
 }
 
+.profile-container {
+    border: solid 1px #000000;
+    text-shadow: none;
+    padding: 0px;
+    margin: 50px 20px;
+    justify-content: space-around;
+}
+
+.list-container {
+    display: block;
+    width: 200px;
+    border: solid 1px #000000;
+    margin: auto;
+}
+
+.slide-box-int {
+    height: 355px;
+    width: 500px;
+}
+
 .text-center {
 	text-align: center;
 	margin: 15px auto;
@@ -31,8 +51,9 @@
 body {
 	font-family: 'Lato', sans-serif;
 	color: #222831;
-	background-color: #F8F8F8
+	background-color: #ededed;
 }
+
 
 body, p {
 	border-width: 50px;
@@ -41,11 +62,17 @@ body, p {
 
 h1 {
 	font-weight: bolder;
-	text-decoration: underline;
+	text-align: left;
+	text-decoration: none;
 }
 
 h2 {
 	text-decoration: underline;
 	font-family: 'Ubuntu', sans-serif;
 	font-weight: lighter;
+}
+
+h2 {
+    text-shadow: 1px 1px #000000;
+    color: #330c30;
 }
