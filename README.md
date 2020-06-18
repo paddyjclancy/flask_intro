@@ -12,33 +12,46 @@
 
 - Installed using the project interpreter
 - File > Settings > Project: ______ > Project Interpreter > + > Flask  
+- Will use local host to display:   http://127.0.0.1:5000/
 
+## setup.py
 
-- Project root:   setup.py     &    todo dir
-    - todo holds source code
-       - Contains __init__.py, app.py
-            - __init__.py   allows you to import from todo, treats it like package
-            - app.oy        application root
-    
-- setup.py file example:
+- Holds flask code
+- Controls methods for redirecting and connection control
+
+### route('/url')
+
+- Tells browser what to display when at '/url'
+
+- html and css files should be contained in respective directories
+
 ```python
-from setuptools import setup, find_packages
+from flask import Flask, render_template
 
-requires = [
-    'flask',
-    'flask-sqlalchemy',
-    'psycopg2',
-]
 
-setup(
-    name='flask_todo',
-    version='0.0',
-    description='A To-Do List built with Flask',
-    author='<Your actual name here>',
-    author_email='<Your actual e-mail address here>',
-    keywords='web flask',
-    packages=find_packages(),
-    include_package_data=True,
-    install_requires=requires
-)
+app = Flask(__name__)
+
+@app.route("/")
+def home():
+    return render_template("index.html")
+```
+
+- index.html will only be a template in this state
+
+- hrefs for other html files / websites within index will need changing in order to be recognised:
+
+```python
+href="location.html"
+
+href="{{ url_for('location') }}"
+```
+
+- hrefs for css files must be added to the file hierarchy under directories 'static' and then 'css'
+
+- They will still not be loaded by your html files though as the href once again needs to be changed.
+
+```python
+href = "styles/style.styles"
+
+href="{{ url_for('static', filename='styles/style.styles') }}"
 ```
