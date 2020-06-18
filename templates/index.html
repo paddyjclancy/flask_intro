@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Flex</title>
+	<link rel="stylesheet"  type= "text/css" href="{{ url_for('static',filename='styles/style.css') }}">
+    <link rel="stylesheet"  type= "text/css" href="{{ url_for('static',filename='styles/button.css') }}">
+    <link rel="stylesheet"  type= "text/css" href="{{ url_for('static',filename='styles/avatar.css') }}">
+    <link rel="stylesheet"  type= "text/css" href="{{ url_for('static',filename='styles/banner.css') }}">
+</head>
+<body>
+	<div class="text-center">
+		<h1>Components Mini-project</h1>
+		<div class="flex-container">
+			<div>
+				<h3>Buttons</h3>
+					<a href="https://www.google.com" class="button-red">Google</a>
+
+					<a href="https://www.twitter.com" class="button-blue">Twitter</a>
+
+					<a href="https://www.reddit.com" class="button-orange">Reddit</a>
+
+					<a href="https://www.instagram.com" class="button-purple">Instagram</a>
+			</div>
+			<div>
+				<h3>Avatars</h3>
+					<img src="https://source.unsplash.com/random/300x300" class="avatar-rnd">
+
+					<img src="https://source.unsplash.com/random/300x300" class="avatar-sq">
+			</div>
+		</div>
+	</div>
+
+	<div class="flex-container">
+		<div class="banner-lennon">
+			<div class="container-up banner-flex-up">
+				<div class="banner-content-left banner-white-text">
+					<h2>Lennon</h2>
+					<p>Use the button to see more photos like this!</p>
+					<a href="https://www.instagram.com/explore/tags/beatles/" class="button-purple">Explore #Beatles</a>
+				</div>
+			</div>
+		</div>
+		<div class="banner-stones">
+			<div class="container-down banner-flex-down">
+				<div class="banner-content-right banner-white-text">
+					<h2>Stones</h2>
+					<p>Use the button to see more photos like this!</p>
+					<a href="https://www.instagram.com/explore/tags/therollingstones/" class="button-purple">Explore #TheRollingStones</a>
+			    </div>
+		    </div>
+	    </div>
+    </div>
+
+</body>
+</html>
